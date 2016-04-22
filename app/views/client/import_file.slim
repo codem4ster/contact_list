@@ -1,0 +1,12 @@
+.panel.panel-info
+  .panel-heading
+    | Import contacts from file
+  .panel-body
+    = bootstrap_form_for :importer,
+                layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10",
+                url: {controller: 'contacts', action: 'import_from_file' },
+                html: { name: 'importer', multipart: true },
+                remote: true do |f|
+      = f.file_field :file, label: 'Xml Dosyası'
+      = f.form_group
+        = f.submit 'Yükle'

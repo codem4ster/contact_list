@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "contacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id":{"type": "integer"},
+          "name": {"type": "string"},
+          "last_name": {"type": "string"},
+          "phone": {"type": "string"}
+        }
+      }
+    },
+    "pagination" :{
+      "type": "object",
+      "properties": {
+        "total_pages": {"type": "integer"},
+        "current_page": {"type": "integer"},
+        "next_page": {"type": ["integer", "null"]},
+        "prev_page": {"type": ["integer", "null"]}
+      }
+    }
+  }
+}

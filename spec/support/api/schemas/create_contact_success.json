@@ -1,0 +1,6 @@
+{
+  "type": "object",
+  "properties": {
+    "created": {"type": "integer"}
+  }
+}

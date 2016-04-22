@@ -1,0 +1,1 @@
+ContactImporterException = Class.new(RuntimeError)

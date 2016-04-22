@@ -1,0 +1,15 @@
+.panel.panel-info.update-page
+  .panel-heading
+    | Update Contact
+  .panel-body
+    = bootstrap_form_for :contact,
+            layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10",
+            url: { controller: 'contacts', action: 'update', id: @id },
+            html: { name: 'contact', 'data-id' => @id },
+            method: 'put',
+            remote: true do |f|
+      = f.text_field :name
+      = f.text_field :last_name
+      = f.text_field :phone, help: "e.g. +90 555 1111111 "
+      = f.form_group
+        = f.submit 'Update'

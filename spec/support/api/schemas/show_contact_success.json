@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "contact": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "integer"},
+        "name": {"type": "string"},
+        "last_name": {"type": "string"},
+        "phone": {"type": "string"}
+      }
+    }
+  }
+}
