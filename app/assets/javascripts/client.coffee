@@ -3,10 +3,10 @@ $.ajaxSetup dataType: 'json'
 
 $(document).on "page:change", ->
   $('form[name="importer"]').on 'ajax:success', (e, data, status, xhr)->
-    if data['success'] == true
-      alert('kişiler başarıyla yüklendi')
-    else
-      alert(data['errors'][0])
+    alert('kişiler başarıyla yüklendi')
+  $('form[name="importer"]').on 'ajax:error', (e, data, status, xhr)->
+    response = data.responseJSON
+    alert(response['errors'][0])
 
   contact_form = $('form[name="contact"]')
   contact_form.on 'ajax:success', (e, data, status, xhr)->
