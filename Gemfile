@@ -21,6 +21,7 @@ gem 'remotipart', '~> 1.2'
 gem 'slim-rails'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap_form'
+gem 'rack-cors', :require => 'rack/cors'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
